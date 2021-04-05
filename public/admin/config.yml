@@ -43,6 +43,16 @@ collections:
             widget: "object"
             fields:
               - {label: Title, name: title, widget: string}
+              - label: "Feature list"
+                name: "feature_list"
+                widget: "list"
+                max: 4
+                fields:
+                  - {label: Image, name: image, widget: string}
+                  - {label: Title, name: title, widget: string}
+
+
+
               # - {label: Description, name: description, widget: string}
               # - {label: Button Text, name: button, widget: string}
               # - {label: Banner Image, name: banner_image, widget: string}

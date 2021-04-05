@@ -11,7 +11,7 @@ function Home({
     features,
     ...props
 }) {
-
+    console.log('features', features)
     return (
         <Layout
             meta={meta}
@@ -40,8 +40,27 @@ function Home({
                 </div>
 
                 <div className={styles.features}>
-                <Typography variant="h1" className={styles.title}>{features.title}</Typography>
+                    <Typography variant="h1" className={styles.title}>{features.title}</Typography>
+                    <div className={styles.featureList}>
+                        {
+                            features.feature_list.map((item, index) => (
+                                <div
+                                    key={index}
+                                    className={styles.featureItem}
+                                >
+                                    <Image
+                                        src={item.image}
+                                        height={200}
+                                        width={200}
+                                    />
 
+                                    <Typography variant="h6">
+                                        {item.title}
+                                    </Typography>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </Layout>

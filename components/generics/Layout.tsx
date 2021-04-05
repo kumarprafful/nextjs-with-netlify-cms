@@ -16,6 +16,7 @@ function Layout({
     return (
         <>
             <Head>
+                <title>{meta.title}</title>
                 <SEO
                     meta={meta}
                 />

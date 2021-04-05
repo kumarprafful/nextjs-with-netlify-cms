@@ -24,23 +24,33 @@
         padding: 10px 40px;
       }
     }
-    .banner{
-        width: 48%;
-        .bannerImage{
-        }
+    .banner {
+      width: 48%;
+      .bannerImage {
+      }
     }
   }
-  .features{
-    background-color: #F7F8FA;
+  .features {
+    background-color: #f7f8fa;
     min-height: 80vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 50px;
-    .title{
-        font-weight: 700;
-        font-size: 40px;
-        margin-bottom: 2rem;
-        line-height: 64px;
+    flex-direction: column;
+    .title {
+      font-weight: 700;
+      font-size: 40px;
+      margin-bottom: 2rem;
+      line-height: 64px;
+    }
+
+    .featureList {
+      display: flex;
+      .featureItem {
+        width: 300px;
+        text-align: center;
+      }
     }
   }
 }
