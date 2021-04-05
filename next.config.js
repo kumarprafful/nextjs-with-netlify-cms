@@ -9,5 +9,8 @@ module.exports = {
         )
         return cfg;
     },
-    target: 'serverless'
+    target: 'serverless',
+    images: {
+        domains: ['wallpapercave.com'],
+    }
 }

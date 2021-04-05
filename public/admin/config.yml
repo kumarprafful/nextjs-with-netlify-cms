@@ -7,16 +7,38 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+      - file: "content/home.md"
+        label: "HomeSSSSS"
+        name: "home"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: string}
+              - {label: og:locale, name: og_locale, widget: string}
+              - {label: og:type, name: og_type, widget: string}
+              - {label: og:title, name: og_title, widget: string}
+              - {label: og:description, name: og_description, widget: string}
+              - {label: og:url, name: og_og_url, widget: string}
+              - {label: og:site_name, name: og_site_name, widget: string}
+              - {label: og:image, name: og_image, widget: string}
+              - {label: og:image_width, name: og_image_width, widget: string}
+              - {label: og:image_height, name: og_image_height, widget: string}
+              - {label: og:twitter_card, name: og_twitter_card, widget: string}
+              - {label: og:label1, name: og_label1, widget: string}
+              - {label: og:data1, name: og_data1, widget: string}
+
+        # - { label: "Title", name: "title", widget: "string"}
+
+
+
+        # - { label: "Publish Date", name: "date", widget: "datetime" }
+        # - { label: "Body", name: "body", widget: "markdown"}
+        # - label: "Cats"
+        #   name: "cats"
+        #   widget: list
+        #   fields:
+        #     - { label: "Name", name: "name", widget: "string"}
+        #     - { label: "Description", name: "description", widget: "text"}
