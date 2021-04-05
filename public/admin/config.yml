@@ -22,7 +22,7 @@ collections:
               - {label: og:type, name: og_type, widget: string}
               - {label: og:title, name: og_title, widget: string}
               - {label: og:description, name: og_description, widget: string}
-              - {label: og:url, name: og_og_url, widget: string}
+              - {label: og:url, name: og_url, widget: string}
               - {label: og:site_name, name: og_site_name, widget: string}
               - {label: og:image, name: og_image, widget: string}
               - {label: og:image_width, name: og_image_width, widget: string}
