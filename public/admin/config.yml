@@ -8,12 +8,13 @@ collections:
     label: "Pages"
     files:
       - file: "content/home.md"
-        label: "HomeSSSSS"
+        label: "Home Page"
         name: "home"
         fields:
           - label: "Meta"
             name: "meta"
             widget: "object"
+            collapsed: false
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Description, name: description, widget: string}
@@ -29,16 +30,20 @@ collections:
               - {label: og:twitter_card, name: og_twitter_card, widget: string}
               - {label: og:label1, name: og_label1, widget: string}
               - {label: og:data1, name: og_data1, widget: string}
-
-        # - { label: "Title", name: "title", widget: "string"}
-
-
-
-        # - { label: "Publish Date", name: "date", widget: "datetime" }
-        # - { label: "Body", name: "body", widget: "markdown"}
-        # - label: "Cats"
-        #   name: "cats"
-        #   widget: list
-        #   fields:
-        #     - { label: "Name", name: "name", widget: "string"}
-        #     - { label: "Description", name: "description", widget: "text"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: string}
+              - {label: Button Text, name: button, widget: string}
+              - {label: Banner Image, name: banner_image, widget: string}
+          - label: "Features"
+            name: "features"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string}
+              # - {label: Description, name: description, widget: string}
+              # - {label: Button Text, name: button, widget: string}
+              # - {label: Banner Image, name: banner_image, widget: string}
+              

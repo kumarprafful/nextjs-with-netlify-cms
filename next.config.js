@@ -11,6 +11,6 @@ module.exports = {
     },
     target: 'serverless',
     images: {
-        domains: ['wallpapercave.com'],
+        domains: ['wallpapercave.com', 'stayqrious.com'],
     }
 }
