@@ -47,6 +47,7 @@
 
     .featureList {
       display: flex;
+      flex-wrap: wrap;
       .featureItem {
         width: 300px;
         text-align: center;
