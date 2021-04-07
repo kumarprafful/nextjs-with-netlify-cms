@@ -1,6 +1,9 @@
 backend:
   name: git-gateway
-  branch: master
+  # branch: master
+  identity_url: "http://localhost:8081/"
+  gateway_url: "http://localhost:9999/"
+  site_domain: "http://localhost:3000/"
 media_folder: public/img
 public_folder: img
 collections:
@@ -16,44 +19,49 @@ collections:
             widget: "object"
             collapsed: false
             fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: string}
-              - {label: og:locale, name: og_locale, widget: string}
-              - {label: og:type, name: og_type, widget: string}
-              - {label: og:title, name: og_title, widget: string}
-              - {label: og:description, name: og_description, widget: string}
-              - {label: og:url, name: og_url, widget: string}
-              - {label: og:site_name, name: og_site_name, widget: string}
-              - {label: og:image, name: og_image, widget: string}
-              - {label: og:image_width, name: og_image_width, widget: string}
-              - {label: og:image_height, name: og_image_height, widget: string}
-              - {label: og:twitter_card, name: og_twitter_card, widget: string}
-              - {label: og:label1, name: og_label1, widget: string}
-              - {label: og:data1, name: og_data1, widget: string}
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: og:locale, name: og_locale, widget: string }
+              - { label: og:type, name: og_type, widget: string }
+              - { label: og:title, name: og_title, widget: string }
+              - { label: og:description, name: og_description, widget: string }
+              - { label: og:url, name: og_url, widget: string }
+              - { label: og:site_name, name: og_site_name, widget: string }
+              - { label: og:image, name: og_image, widget: string }
+              - { label: og:image_width, name: og_image_width, widget: string }
+              - {
+                  label: og:image_height,
+                  name: og_image_height,
+                  widget: string,
+                }
+              - {
+                  label: og:twitter_card,
+                  name: og_twitter_card,
+                  widget: string,
+                }
+              - { label: og:label1, name: og_label1, widget: string }
+              - { label: og:data1, name: og_data1, widget: string }
           - label: "Header"
             name: "header"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: string}
-              - {label: Button Text, name: button, widget: string}
-              - {label: Banner Image, name: banner_img, widget: string}
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Button Text, name: button, widget: string }
+              - { label: Banner Image, name: banner_img, widget: string }
           - label: "Features"
             name: "features"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string}
+              - { label: Title, name: title, widget: string }
               - label: "Feature list"
                 name: "feature_list"
                 widget: "list"
                 max: 4
                 fields:
-                  - {label: Image, name: image, widget: string}
-                  - {label: Title, name: title, widget: string}
-
-
+                  - { label: Image, name: image, widget: string }
+                  - { label: Title, name: title, widget: string }
 
               # - {label: Description, name: description, widget: string}
               # - {label: Button Text, name: button, widget: string}
               # - {label: Banner Image, name: banner_image, widget: string}
-              

@@ -33,5 +33,4 @@ features:
       title: How to learn, think, and solve problems creatively.
     - image: https://stayqrious.com/wp-content/uploads/2020/09/cd4.png
       title: How to lead teams and communicate confidently.
-
 ---

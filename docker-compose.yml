@@ -1,0 +1,70 @@
+version: "3"
+services:
+    fullstack-mysql:
+        image: mysql:5.7
+        container_name: full_db_mysql
+        ports:
+            - 3306:3306
+        environment:
+            - MYSQL_ROOT_HOST=localhost
+            - MYSQL_USER=gotrue
+            - MYSQL_PASSWORD=password
+            - MYSQL_DATABASE=gotrue
+            - MYSQL_ROOT_PASSWORD=password
+        volumes:
+            - database_mysql:/var/lib/mysql
+        networks:
+            - fullstack
+    nextjs:
+        build: ./
+        ports:
+            - 3000:3000
+            # - 80:80
+            # - 8081:8081
+            # - 9999:9999
+    gotrue:
+        build: ./gotrue
+        env_file:
+            - ./gotrue/.env
+        ports:
+            - 8081:8081
+            # - 9999:9999
+            # - 80:80
+            # - 3000:3000
+        depends_on:
+            - fullstack-mysql
+        links:
+            - fullstack-mysql
+    gitgateway:
+        build: ./git_gateway
+        env_file:
+            - ./git_gateway/.env
+        ports:
+            - 9999:9999
+            # - 8081:8081
+            # - 80:80
+            # - 3000:3000
+        depends_on:
+            - gotrue
+        links:
+            - gotrue
+    nginx:
+        build: ./nginx
+        ports:
+          - 80:80
+        depends_on:
+            - gotrue
+            - gitgateway
+            - nextjs
+        #   - 3000:3000
+        #   - 8081:8081
+        #   - 9999:9999
+volumes:
+    api:
+    # database_postgres:                  # Uncomment this when using postgres.
+    database_mysql:                   # Uncomment this when using mysql.
+
+# Networks to be created to facilitate communication between containers
+networks:
+    fullstack:
+        driver: bridge

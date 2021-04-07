@@ -11,7 +11,7 @@ function Home({
     features,
     ...props
 }) {
-    console.log('features', features)
+
     return (
         <Layout
             meta={meta}
